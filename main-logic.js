@@ -1,20 +1,17 @@
-AFRAME.registerComponent('simulation-logic', {
+AFRAME.registerComponent('pc-logic', {
   schema: {
-    etapeActuelle: { type: 'int', default: 1 }
+    cableBranche: { type: 'boolean', default: false },
+    vitreOuverte: { type: 'boolean', default: false },
+    ramEnMain: { type: 'boolean', default: false },
+    ramClipsee: { type: 'boolean', default: true } // Elle est dedans au début
   },
 
   init: function () {
-    console.log("Simulation initialisée. Étape 1 : Brancher le câble.");
+    this.hud = document.querySelector('#hud-texte');
   },
 
-  // Fonction pour valider une étape et passer à la suivante
-  validerEtape: function (numeroEtape) {
-    if (this.data.etapeActuelle === numeroEtape) {
-      this.data.etapeActuelle++;
-      console.log("Étape " + numeroEtape + " terminée. Prochaine : " + this.data.etapeActuelle);
-      return true;
-    }
-    console.warn("Action effectuée au mauvais moment !");
-    return false;
+  updateHud: function (msg) {
+    this.hud.setAttribute('value', msg);
+    this.hud.setAttribute('visible', true);
   }
 });
