@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prism</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+<body>
+
+
+<a-scene>
+  <a-assets>
+    <a-asset-item id="Bureau" src="Desk.glb"></a-asset-item>
+    <a-asset-item id="Moniteur" src="Monitor.glb"></a-asset-item>
+    <a-asset-item id="Tour" src="Gaming Computer.glb"></a-asset-item>
+  </a-assets>
+
+  <a-entity camera 
+            look-controls 
+            wasd-controls="acceleration: 20; fly: true" 
+            position="0 1.6 0">
+  </a-entity>
+
+  <a-entity gltf-model="#Bureau" 
+            position="0 0.75 -2" 
+            rotation="0 0 0"
+            scale="1 1 1">
+  </a-entity>
+
+  <a-entity gltf-model="#Moniteur" 
+            position="0 1.18 -2" 
+            rotation="0 0 0"
+            scale="1 1 1">
+  </a-entity>
+
+  <a-entity gltf-model="#Tour" 
+            position="0.6 1.38 -2" 
+            rotation="0 90 0"
+            scale="0.18 0.18 0.18">
+  </a-entity>
+
+</a-scene>
+
+
+</body>
+</html>
