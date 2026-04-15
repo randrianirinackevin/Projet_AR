@@ -51,12 +51,12 @@ AFRAME.registerComponent('interactif', {
       
       this.el.setAttribute('animation', {
         property: 'position',
-        to: nouvelEtat ? '0.5 0.42 -4.95' : '0.5 0.52 -4.60',
+        to: nouvelEtat ? '1 0.80 -4.68' : '1 0.01 -4.68',
         dur: 600
       });
       this.el.setAttribute('animation__rot', {
         property: 'rotation',
-        to: nouvelEtat ? '90 0 0' : '70 0 0',
+        to: nouvelEtat ? '86 0 0' : '90 0 0',
         dur: 600
       });
     }
@@ -67,7 +67,7 @@ AFRAME.registerComponent('interactif', {
       
       this.el.setAttribute('animation', {
         property: 'position',
-        to: nouvelEtat ? '0.126 0 0.5' : '0.126 0.004 0',
+        to: nouvelEtat ? '0.25 0 0.5' : '0.25 0.004 0',
         dur: 800
       });
     }
