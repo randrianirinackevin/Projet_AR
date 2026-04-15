@@ -6,29 +6,30 @@
     <title>Prism</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
-    <script src="interactions.js"></script>
-    <script src="main-logic.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/main-logic.js"></script>
   </head>
   <body>
     <a-scene pc-logic>
       <a-assets>
-        <a-asset-item id="Bureau" src="Desk.glb"></a-asset-item>
-        <a-asset-item id="souris" src="Computer mouse.glb"></a-asset-item>
-        <a-asset-item id="clavier" src="Keyboard.glb"></a-asset-item>"
-        <a-asset-item id="Moniteur" src="Monitor.glb"></a-asset-item>
-        <a-asset-item id="Gpu" src="Graphics card.glb"></a-asset-item>
-        <a-asset-item id="Ram" src="RAM.glb"></a-asset-item>
-        <a-asset-item id="Chaise" src="Office Chair.glb"></a-asset-item>
-        <a-asset-item id="panier" src="Dog Bed.glb"></a-asset-item>
-        <a-asset-item id="Canape" src="Couch Medium.glb"></a-asset-item>
-        <a-asset-item id="table" src="Coffee Table.glb"></a-asset-item>
-        <a-asset-item id="collision" src="Collision.glb"></a-asset-item>
-        <a-asset-item id="Tv" src="Tv.glb"></a-asset-item>
-        <a-image id="logo" src="ipssi-logo-2025.png"></a-image>
-        <a-image id="background-screen" src="windows.jpg"></a-image>
-        <a-image id="sol" src="granite_tile_diff_2k.jpg"></a-image>
-        <a-image id="mur" src="old_planks_02_diff_8k.jpg"></a-image>
-        <a-image id="plafond" src="4K_false_ceiling_ambientocclusion.png"></a-image>
+        <a-asset-item id="bureau" src="assets/bureau.glb"></a-asset-item>
+        <a-asset-item id="souris" src="assets/souris_ordinateur.glb"></a-asset-item>
+        <a-asset-item id="clavier" src="assets/clavier.glb"></a-asset-item>"
+        <a-asset-item id="moniteur" src="assets/ecran_ordinateur.glb"></a-asset-item>
+        <a-asset-item id="gpu" src="assets/carte_graphique.glb"></a-asset-item>
+        <a-asset-item id="ram" src="assets/ram.glb"></a-asset-item>
+        <a-asset-item id="chaise" src="assets/chaise_bureau.glb"></a-asset-item>
+        <a-asset-item id="panier" src="assets/panier.glb"></a-asset-item>
+        <a-asset-item id="canape" src="assets/canape.glb"></a-asset-item>
+        <a-asset-item id="table" src="assets/table_basse.glb"></a-asset-item>
+        <a-asset-item id="collision" src="assets/collision.glb"></a-asset-item>
+        <a-asset-item id="tv" src="assets/tv.glb"></a-asset-item>
+
+        <a-image id="logo" src="images/logo_ipssi.png"></a-image>
+        <a-image id="background-screen" src="images/windows.jpg"></a-image>
+        <a-image id="sol" src="images/sol.jpg"></a-image>
+        <a-image id="mur" src="images/mur.jpg"></a-image>
+        <a-image id="plafond" src="images/plafond.png"></a-image>
       </a-assets>
 
       <a-entity
@@ -55,7 +56,7 @@
       </a-entity>
 
       <a-entity
-        gltf-model="#Bureau"
+        gltf-model="#bureau"
         position="0 0 -4"
         rotation="0 0 0"
         scale="2 2 2"
@@ -77,7 +78,7 @@
 
       <a-entity
         id="Moniteur-Entity"
-        gltf-model="#Moniteur"
+        gltf-model="#moniteur"
         position="0.2 0.86 -4.2"
         rotation="0 0 0"
         scale="2.5 2.5 2.5"
@@ -93,7 +94,7 @@
       </a-entity>
 
       <a-entity
-        gltf-model="#Chaise"
+        gltf-model="#chaise"
         position="0 0 -3"
         rotation="0 180 0"
         scale="1.3 1.3 1.3"
@@ -120,7 +121,7 @@
         ></a-box>
 
         <a-entity
-          gltf-model="#Gpu"
+          gltf-model="#gpu"
           position="0 0 0"
           rotation="0 90 0"
           scale="0.07 0.07 0.07"
@@ -131,7 +132,7 @@
           id="ram"
           class="raycastable"
           interactif="type: ram"
-          gltf-model="#Ram"
+          gltf-model="#ram"
           position="-0.05 0.15 0"
           rotation="0 90 0"
           scale="0.07 0.07 0.07"
@@ -194,13 +195,13 @@
       ></a-entity>
 
       <a-entity
-        gltf-model="#Canape"
+        gltf-model="#canape"
         position="-4.2 0 1.5"
         rotation="0 90 0"
         scale="0.5 0.5 0.5"
       ></a-entity>
       <a-entity
-        gltf-model="#Canape"
+        gltf-model="#canape"
         position="-1 0 1.5"
         rotation="0 270 0"
         scale="0.5 0.5 0.5"
@@ -214,7 +215,7 @@
       ></a-entity>
 
       <a-entity
-        gltf-model="#Tv"
+        gltf-model="#tv"
         position="0.5 2.5 -5"
         rotation="0 180 0"
         scale="1 1 1"
