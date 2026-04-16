@@ -24,12 +24,23 @@
         <a-asset-item id="table" src="assets/table_basse.glb"></a-asset-item>
         <a-asset-item id="collision" src="assets/collision.glb"></a-asset-item>
         <a-asset-item id="tv" src="assets/tv.glb"></a-asset-item>
+        <a-asset-item id="joconde" src="assets/joconde.glb"></a-asset-item>
+        <a-asset-item id="tableau" src="assets/tableau.glb"></a-asset-item>
+        <a-asset-item id="cadre" src="assets/Frame.glb"></a-asset-item>
+        <a-asset-item id="pant" src="assets/plant.glb"></a-asset-item>
+        <a-asset-item id="lustre" src="assets/lustre.glb"></a-asset-item> 
+        <a-asset-item id="ecranblanc" src="assets/ecranblanc.glb"></a-asset-item>
+        <a-asset-item id="projector" src="assets/projector.glb"></a-asset-item>  
+
+
+
 
         <a-image id="logo" src="images/logo_ipssi.png"></a-image>
         <a-image id="background-screen" src="images/windows.jpg"></a-image>
         <a-image id="sol" src="images/sol.jpg"></a-image>
         <a-image id="mur" src="images/mur.jpg"></a-image>
         <a-image id="plafond" src="images/plafond.png"></a-image>
+        <a-image id="milou" src="images/milou.jpg"></a-image>
       </a-assets>
 
       <a-entity
@@ -229,6 +240,65 @@
           material="shader:flat; side: double"
         ></a-plane>
       </a-entity>
+
+      <a-entity
+        gltf-model="#joconde"
+        position="4.95 1.5 2"
+        rotation="0 90 0"
+        scale="0.1 0.1 0.1"
+      ></a-entity>
+
+      <a-entity
+        gltf-model="#tableau"
+        position="-4.95 2 2"
+        rotation="0 -90 0"
+        scale=" 1.5 1.5 1.5"
+      ></a-entity>
+
+      <a-entity
+        gltf-model="#cadre"
+        position="4.95 2 -3"
+        rotation="0 90 0"
+        scale="1.2 1.2 1.2">
+
+        <a-plane
+          src="#milou"
+          position="0 0 0.02"
+          rotation="0 180 0"
+          width="0.6"
+          height="0.6"
+          material="shader:flat; side: double"
+        ></a-plane>
+        </a-entity>
+
+        <a-entity
+        gltf-model="#pant"
+        position="-4.5 0 -4.7"
+        rotation="0 90 0"
+        scale="0.25 0.25 0.25"
+      ></a-entity>
+
+        <a-entity
+          gltf-model="#lustre"
+          position="0 4 0"
+          rotation="0 0 0"
+          scale="1.5 1.5 1.5"
+        ></a-entity>
+
+        <a-entity
+          gltf-model="#ecranblanc"
+          position="-4.9 2 -2."
+          rotation="0 180 0"
+          scale="1.5 1.5 1.5"
+        ></a-entity>
+        
+        <a-entity
+          gltf-model="#projector"
+          position="-3 3.2 -2.2"
+          rotation="0 210 0"
+          scale="1.5 1.5 1.5"
+        ></a-entity>
+
 
       <a-entity id="room">
         <a-plane
